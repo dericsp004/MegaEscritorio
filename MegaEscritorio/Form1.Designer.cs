@@ -38,7 +38,7 @@
             this.lblMaterial = new System.Windows.Forms.Label();
             this.comSelectMaterial = new System.Windows.Forms.ComboBox();
             this.lblDays = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.TotalField = new System.Windows.Forms.Label();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -47,9 +47,10 @@
             // 
             this.comSelectDays.FormattingEnabled = true;
             this.comSelectDays.Items.AddRange(new object[] {
-            "3 Days",
-            "5 Days",
-            "7 Days"});
+            "0",
+            "3",
+            "5 ",
+            "7 "});
             this.comSelectDays.Location = new System.Drawing.Point(181, 212);
             this.comSelectDays.Name = "comSelectDays";
             this.comSelectDays.Size = new System.Drawing.Size(121, 21);
@@ -128,7 +129,10 @@
             this.comSelectMaterial.Items.AddRange(new object[] {
             "Oak",
             "Laminate",
-            "Pine"});
+            "Pine",
+            "Marble",
+            "Cedar",
+            "Aluminum"});
             this.comSelectMaterial.Location = new System.Drawing.Point(181, 179);
             this.comSelectMaterial.Name = "comSelectMaterial";
             this.comSelectMaterial.Size = new System.Drawing.Size(121, 21);
@@ -137,21 +141,22 @@
             // lblDays
             // 
             this.lblDays.AutoSize = true;
-            this.lblDays.Location = new System.Drawing.Point(73, 213);
+            this.lblDays.Location = new System.Drawing.Point(37, 215);
             this.lblDays.Name = "lblDays";
-            this.lblDays.Size = new System.Drawing.Size(101, 13);
+            this.lblDays.Size = new System.Drawing.Size(138, 13);
             this.lblDays.TabIndex = 0;
-            this.lblDays.Text = "Select delivery days";
+            this.lblDays.Text = "Select rush production days";
             // 
-            // label7
+            // TotalField
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 287);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(296, 33);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Total will display here";
+            this.TotalField.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.TotalField.AutoSize = true;
+            this.TotalField.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalField.Location = new System.Drawing.Point(34, 287);
+            this.TotalField.Name = "TotalField";
+            this.TotalField.Size = new System.Drawing.Size(296, 33);
+            this.TotalField.TabIndex = 12;
+            this.TotalField.Text = "Total will display here";
             // 
             // buttonCalculate
             // 
@@ -163,6 +168,7 @@
             this.buttonCalculate.TabIndex = 6;
             this.buttonCalculate.Text = "Click for Price Estimate";
             this.buttonCalculate.UseVisualStyleBackColor = false;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // label6
             // 
@@ -183,7 +189,7 @@
             this.ClientSize = new System.Drawing.Size(369, 337);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.buttonCalculate);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.TotalField);
             this.Controls.Add(this.lblDays);
             this.Controls.Add(this.comSelectMaterial);
             this.Controls.Add(this.lblMaterial);
@@ -214,7 +220,7 @@
         private System.Windows.Forms.Label lblMaterial;
         private System.Windows.Forms.ComboBox comSelectMaterial;
         private System.Windows.Forms.Label lblDays;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label TotalField;
         private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.Label label6;
     }

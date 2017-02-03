@@ -21,5 +21,28 @@ namespace MegaEscritorio
         {
 
         }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            string width = txtEnterWidth.Text;
+            string length = txtEnterLength.Text;
+            string numDrawers = comSelectDrawers.Text;
+            string material = comSelectMaterial.Text;
+            string rushDays = comSelectDays.Text;
+
+            try
+            {
+                Desk myDesk = new Desk(Convert.ToDouble(width), Convert.ToDouble(width), Convert.ToInt16(numDrawers), material.ToLower());
+                Order newOrder = new Order(myDesk, Convert.ToInt16(rushDays));
+                double orderTotal = newOrder.getTotalPrice();
+
+                TotalField.Text = Convert.ToString(orderTotal);
+                newOrder.writeFile();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please enter valid Data");
+            }
+        }
     }
 }

@@ -7,7 +7,10 @@ namespace MegaEscritorio
         private double width;
         private double length;
         private int numDrawers;
-        private string material;
+
+        enum MaterialType { oak, laminate, pine, marble, cedar, aluminum };
+        private MaterialType material;
+        
 
         //Default Constructor
         public Desk()
@@ -50,7 +53,7 @@ namespace MegaEscritorio
 
         public string getMaterial()
         {
-            return material;
+            return Convert.ToString(material);
         }
 
         // Setters
@@ -71,7 +74,26 @@ namespace MegaEscritorio
 
         public void setMaterial(string material)
         {
-            this.material = material;
+            switch (material) {
+                case "oak":
+                    this.material = MaterialType.oak;
+                    break;
+                case "laminate":
+                    this.material = MaterialType.laminate;
+                    break;
+                case "pine":
+                    this.material = MaterialType.pine;
+                    break;
+                case "marble":
+                    this.material = MaterialType.marble;
+                    break;
+                case "cedar":
+                    this.material = MaterialType.cedar;
+                    break;
+                case "aluminum":
+                    this.material = MaterialType.aluminum;
+                    break;
+            }
         }
 
         // Displays the table specifications to the Console

@@ -16,11 +16,16 @@ namespace MegaEscritorio
         private int rushDays;
         private double[,] priceRushOrderTable = new double[3, 3];
 
-        public Order(Desk myDesk, bool rushOrder, int rushDays)
+        public Order(Desk myDesk, int rushDays)
         {
             this.myDesk = myDesk;
-            setRushOrder(rushOrder);
+            //setRushOrder(rushOrder);
             setRushDays(rushDays);
+            if (rushDays == 0)
+                rushOrder = false;
+            else
+                rushOrder = true;
+
             readFile();
         }
         // Getters
@@ -39,11 +44,12 @@ namespace MegaEscritorio
             double totalPrice = calculateTotal();
             return totalPrice;
         }
+
         // Setters
-        public void setRushOrder(bool rushDelivery)
-        {
-            this.rushOrder = rushDelivery;
-        }
+        //public void setRushOrder(bool rushDelivery)
+        //{
+           // this.rushOrder = rushDelivery;
+       // }
 
         public void setRushDays(int days)
         {
@@ -142,6 +148,15 @@ namespace MegaEscritorio
                     break;
                 case "pine":
                     orderTotal += 50.00;
+                    break;
+                case "marble":
+                    orderTotal += 275.00;
+                    break;
+                case "cedar":
+                    orderTotal += 150.00;
+                    break;
+                case "aluminum":
+                    orderTotal += 120.00;
                     break;
             }
 
