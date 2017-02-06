@@ -45,6 +45,7 @@
             // 
             // comSelectDays
             // 
+            this.comSelectDays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comSelectDays.FormattingEnabled = true;
             this.comSelectDays.Items.AddRange(new object[] {
             "0",
@@ -58,6 +59,7 @@
             // 
             // comSelectDrawers
             // 
+            this.comSelectDrawers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comSelectDrawers.FormattingEnabled = true;
             this.comSelectDrawers.Items.AddRange(new object[] {
             "0",
@@ -90,7 +92,7 @@
             // lblWidth
             // 
             this.lblWidth.AutoSize = true;
-            this.lblWidth.Location = new System.Drawing.Point(66, 53);
+            this.lblWidth.Location = new System.Drawing.Point(66, 56);
             this.lblWidth.Name = "lblWidth";
             this.lblWidth.Size = new System.Drawing.Size(109, 13);
             this.lblWidth.TabIndex = 0;
@@ -99,7 +101,7 @@
             // lblLength
             // 
             this.lblLength.AutoSize = true;
-            this.lblLength.Location = new System.Drawing.Point(61, 86);
+            this.lblLength.Location = new System.Drawing.Point(61, 89);
             this.lblLength.Name = "lblLength";
             this.lblLength.Size = new System.Drawing.Size(114, 13);
             this.lblLength.TabIndex = 0;
@@ -108,7 +110,7 @@
             // lblDrawers
             // 
             this.lblDrawers.AutoSize = true;
-            this.lblDrawers.Location = new System.Drawing.Point(30, 145);
+            this.lblDrawers.Location = new System.Drawing.Point(30, 148);
             this.lblDrawers.Name = "lblDrawers";
             this.lblDrawers.Size = new System.Drawing.Size(145, 13);
             this.lblDrawers.TabIndex = 0;
@@ -117,7 +119,7 @@
             // lblMaterial
             // 
             this.lblMaterial.AutoSize = true;
-            this.lblMaterial.Location = new System.Drawing.Point(58, 179);
+            this.lblMaterial.Location = new System.Drawing.Point(58, 182);
             this.lblMaterial.Name = "lblMaterial";
             this.lblMaterial.Size = new System.Drawing.Size(117, 13);
             this.lblMaterial.TabIndex = 0;
@@ -125,6 +127,7 @@
             // 
             // comSelectMaterial
             // 
+            this.comSelectMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comSelectMaterial.FormattingEnabled = true;
             this.comSelectMaterial.Items.AddRange(new object[] {
             "Oak",
@@ -151,12 +154,13 @@
             // 
             this.TotalField.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.TotalField.AutoSize = true;
-            this.TotalField.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalField.Location = new System.Drawing.Point(34, 287);
+            this.TotalField.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalField.Location = new System.Drawing.Point(12, 283);
             this.TotalField.Name = "TotalField";
-            this.TotalField.Size = new System.Drawing.Size(296, 33);
+            this.TotalField.Size = new System.Drawing.Size(80, 29);
             this.TotalField.TabIndex = 12;
-            this.TotalField.Text = "Total will display here";
+            this.TotalField.Text = "Total: ";
+            this.TotalField.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonCalculate
             // 
@@ -176,11 +180,11 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(105, 9);
+            this.label6.Location = new System.Drawing.Point(74, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 23);
+            this.label6.Size = new System.Drawing.Size(228, 23);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Desk Calculator";
+            this.label6.Text = "Mega Escritorio Calculator";
             // 
             // Form1
             // 
@@ -201,7 +205,7 @@
             this.Controls.Add(this.comSelectDrawers);
             this.Controls.Add(this.comSelectDays);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

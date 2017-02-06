@@ -36,7 +36,8 @@ namespace MegaEscritorio
                 Order newOrder = new Order(myDesk, Convert.ToInt16(rushDays));
                 double orderTotal = newOrder.getTotalPrice();
 
-                TotalField.Text = Convert.ToString(orderTotal);
+                string totalFormat = String.Format("{0:C}", orderTotal);
+                TotalField.Text = "Total: " + totalFormat;
                 newOrder.writeFile();
             }
             catch (Exception)
