@@ -32,7 +32,7 @@ namespace MegaEscritorio
 
             try
             {
-                Desk myDesk = new Desk(Convert.ToDouble(width), Convert.ToDouble(width), Convert.ToInt16(numDrawers), material.ToLower());
+                Desk myDesk = new Desk(Convert.ToDouble(width), Convert.ToDouble(length), Convert.ToInt16(numDrawers), material.ToLower());
                 Order newOrder = new Order(myDesk, Convert.ToInt16(rushDays));
                 double orderTotal = newOrder.getTotalPrice();
 
