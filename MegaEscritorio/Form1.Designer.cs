@@ -205,7 +205,7 @@
             this.Controls.Add(this.comSelectDrawers);
             this.Controls.Add(this.comSelectDays);
             this.Name = "Form1";
-            this.Text = "s";
+            this.Text = "MegaEscritorio - Deric Plummer, Scott Bailey";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
